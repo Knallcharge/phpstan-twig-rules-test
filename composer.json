@@ -1,9 +1,6 @@
 {
   "type": "project",
   "license": "proprietary",
-  "minimum-stability": "stable",
-  "prefer-stable": true,
-  "minimum-stability": "beta",
   "require": {
     "php": ">=7.2.5",
     "ext-ctype": "*",
@@ -19,9 +16,9 @@
   "require-dev": {
     "phpstan/phpstan": "^1.1",
     "phpstan/extension-installer": "^1.1",
-    "symplify/phpstan-extensions": "^10.0@beta",
-    "symplify/phpstan-rules": "^10.0@beta",
-    "symplify/phpstan-twig-rules": "^10.0.x-dev"
+    "symplify/phpstan-extensions": "^10.0",
+    "symplify/phpstan-rules": "^10.0",
+    "symplify/phpstan-twig-rules": "^10.0"
   },
   "config": {
     "optimize-autoloader": true,
@@ -40,30 +37,6 @@
       "App\\Tests\\": "tests/"
     }
   },
-  "replace": {
-    "symfony/polyfill-ctype": "*",
-    "symfony/polyfill-iconv": "*",
-    "symfony/polyfill-php72": "*"
-  },
-  "scripts": {
-    "auto-scripts": {
-      "cache:clear": "symfony-cmd",
-      "assets:install %PUBLIC_DIR%": "symfony-cmd"
-    },
-    "post-install-cmd": [
-      "@auto-scripts"
-    ],
-    "post-update-cmd": [
-      "@auto-scripts"
-    ]
-  },
-  "conflict": {
-    "symfony/symfony": "*"
-  },
-  "extra": {
-    "symfony": {
-      "allow-contrib": false,
-      "require": "5.3.*"
-    }
-  }
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
